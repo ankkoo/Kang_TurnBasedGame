@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/txtCombatLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Combat Log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,8 +49,8 @@
         android:id="@+id/txtCharName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
         android:text="My Character"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -95,11 +96,81 @@
         android:id="@+id/btnNextTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="68dp"
         android:text="First Turn"
         app:layout_constraintEnd_toStartOf="@+id/txtEnemyName"
-        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toEndOf="@+id/txtCharName"
         app:layout_constraintTop_toTopOf="@+id/txtCharName" />
+
+    <ImageButton
+        android:id="@+id/btnskill1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnskill2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/txtCharMp"
+        app:layout_constraintTop_toBottomOf="@+id/btnNextTurn"
+        app:srcCompat="@drawable/skill1" />
+
+    <ImageButton
+        android:id="@+id/btnpassive2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/txtEnemyMp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnpassive1"
+        app:layout_constraintTop_toTopOf="@+id/btnpassive1"
+        app:srcCompat="@drawable/skill2" />
+
+    <ImageButton
+        android:id="@+id/btnskill2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnpassive1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill1"
+        app:layout_constraintTop_toTopOf="@+id/btnskill1"
+        app:srcCompat="@drawable/skill4" />
+
+    <ImageButton
+        android:id="@+id/btnpassive1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/btnpassive2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnskill2"
+        app:layout_constraintTop_toTopOf="@+id/btnskill2"
+        app:srcCompat="@drawable/skill3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="122dp"
+        android:layout_height="136dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/alpha" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="133dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="184dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gamma" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
